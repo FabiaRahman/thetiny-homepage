@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>thetiny.site — Shorten Your URL in seconds</title>
+  <meta name="description" content="Create short, memorable links that you can share anywhere. Track every click with powerful analytics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dist/output.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-white font-sans text-gray-800 antialiased">
+
+  <!-- ====== NAVBAR ============================== -->
+    <header id="navbar" class="fixed inset-x-0 top-0 z-40 border-b border-gray-900 bg-white/90 backdrop-blur-md">    
+      <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+      <a href="#home" class="inline-flex h-full items-center"><img src="assets/img/logo.png" alt="thetiny.site" class="h-16 w-auto max-w-full object-contain" /></a>        
+      <ul class="hidden items-center gap-4 text-sm font-medium text-gray-600 lg:flex">
+        <li><a class="nav-link hover:text-violet-600" href="#home">Home</a></li>
+        <li><a class="nav-link hover:text-violet-600" href="#">About</a></li>
+        <li><a class="nav-link hover:text-violet-600" href="#">Blog</a></li>
+        <li><a class="nav-link hover:text-violet-600" href="#">Terms</a></li>
+      </ul>
+
+      <div class="hidden items-center gap-3 lg:flex">
+        <a href="#" class="rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:text-violet-600">Login</a>
+        <a href="#" class="rounded-lg bg-violet-600 px-4 py-2 text-sm font-bold text-white">Sign Up Free</a>
+      </div>
+
+      <button id="menuBtn" class="rounded-lg p-2 text-gray-700 hover:bg-gray-100 lg:hidden" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu">
+        <svg id="iconOpen" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="iconClose" class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </nav>
+
+    <div id="mobileMenu" class="hidden border-t border-gray-100 bg-white px-4 pb-4 pt-2 lg:hidden">
+      <div class="flex items-center gap-4 px-3 py-2.5">
+        <a class="mobile-link font-medium hover:text-violet-600" href="#home">Home</a>
+        <a class="mobile-link font-medium hover:text-violet-600" href="#">About</a>
+        <a class="mobile-link font-medium hover:text-violet-600" href="#">Blog</a>
+        <a class="mobile-link font-medium hover:text-violet-600" href="#">Terms</a>
+      </div>
+      <div class="mt-3 flex gap-3 border-t border-gray-100 pt-3">
+        <a href="#" class="flex-1 rounded-lg px-4 py-2.5 text-center text-sm font-semibold ring-1 ring-gray-200">Login</a>
+        <a href="#" class="flex-1 rounded-lg bg-violet-600 px-4 py-2.5 text-center text-sm font-bold text-white">Sign Up Free</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+<!-- ============ HERO ================================== -->
+    <section class="bg-gray-100 pb-16 pt-32 sm:pt-36">
+      <div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+        <span class="inline-flex items-center gap-2 rounded-full border border-violet-300 bg-gray-200 px-5 py-2 text-sm font-bold text-violet-600">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+          Trusted by thousands of users
+        </span>
+
+        <h1 class="mx-auto mt-6 max-w-3xl text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+          Shorten Your URL
+          <span class="block text-violet-600">in seconds</span>
+        </h1>
+
+        <p class="mx-auto mt-5 max-w-xl text-lg text-gray-500">
+          Create short, memorable links that you can share anywhere. Track every click with powerful analytics.
+        </p>
+
+        <div class="mx-auto mt-10 max-w-2xl rounded-3xl bg-white p-8 shadow-[0_0_60px_rgba(0,0,0,0.06)] sm:p-10">
+          <span class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-violet-100 text-violet-600">
+            <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          </span>
+          <h2 class="mt-5 text-lg font-bold text-gray-900 sm:text-xl">Login to make your URL short</h2>
+          <p class="mt-3 text-sm text-gray-500 sm:text-base">
+            Sign in or create a free account to start shortening links,<br />
+            generating QR codes, and tracking every click in real time.
+          </p>
+          <div class="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+            <a href="#" class="inline-flex items-center justify-center gap-2 rounded-xl bg-violet-600 px-6 py-3 text-sm font-bold text-white">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+              Login to Make URL
+            </a>
+            <a href="#" class="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-violet-600 bg-white px-6 py-3 text-sm font-bold text-violet-600">
+              Sign Up Free
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ============ STATS (static) =============================== -->
+    <section class="stats bg-violet-600 py-12">
+      <div class="mx-auto grid max-w-5xl grid-cols-2 gap-8 px-4 text-center sm:px-6 lg:grid-cols-4 lg:px-8">
+        <div><p class="text-3xl font-extrabold text-white sm:text-4xl">100K+</p><p class="mt-1 text-sm text-violet-200">Links Created</p></div>
+        <div><p class="text-3xl font-extrabold text-white sm:text-4xl">1M+</p><p class="mt-1 text-sm text-violet-200">Total Clicks</p></div>
+        <div><p class="text-3xl font-extrabold text-white sm:text-4xl">180+</p><p class="mt-1 text-sm text-violet-200">Countries</p></div>
+        <div><p class="text-3xl font-extrabold text-white sm:text-4xl">99.9%</p><p class="mt-1 text-sm text-violet-200">Uptime</p></div>
+      </div>
+    </section>
+
+<!-- ============ MOST POPULAR LINKS ============================ -->
+    <section id="popular" class="scroll-mt-20 bg-white py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl">Most Popular Links</h2>
+          <p class="mt-3 text-gray-500">Check out the most clicked links on our platform</p>
+        </div>
+
+        <div class="mx-auto mt-12 max-w-3xl space-y-4">
+          <article class="flex flex-col gap-4 rounded-xl bg-gray-100 p-5 ring-1 ring-gray-200 shadow-sm transition-shadow hover:shadow-[6px_6px_16px_rgba(0,0,0,0.12)] sm:flex-row sm:items-center">
+            <div class="min-w-0 flex-1">
+              <a href="https://thetiny.site/ARLSeN" target="_blank" rel="noopener" class="break-all font-mono text-sm text-violet-600 hover:underline">https://thetiny.site/ARLSeN</a>
+              <p class="truncate text-xs text-gray-400" title="https://api.whatsapp.com/send?phone=8801880811048&text=i+want+to+be+a+partner+of+bangla+puzzle">https://api.whatsapp.com/send?phone=8801880811048&amp;text=i+want+to+be+a+partner+of+bangla+puzzle</p>
+            </div>
+            <div class="flex shrink-0 items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-white px-3 py-1.5 text-xs font-bold text-gray-900 ring-1 ring-gray-100 shadow-sm">
+                <svg class="h-3.5 w-3.5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9l5 12 1.8-5.2L21 14z"/><path d="M4 4l2 2"/><path d="M9 2v3"/><path d="M2 9h3"/></svg>
+                439 clicks
+              </span>
+              <button class="copy-btn inline-flex items-center gap-1.5 rounded-lg bg-violet-600 px-4 py-2 text-xs font-bold text-white" data-copy="https://thetiny.site/ARLSeN">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy
+              </button>
+              <button class="qr-btn inline-flex items-center gap-1.5 rounded-lg bg-gray-200 px-3 py-2 text-xs font-semibold text-violet-600" data-qr="https://thetiny.site/ARLSeN">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="5" height="5" rx="1"/><rect x="16" y="3" width="5" height="5" rx="1"/><rect x="3" y="16" width="5" height="5" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
+                QR
+              </button>
+            </div>
+          </article>
+
+          <article class="flex flex-col gap-4 rounded-xl bg-gray-100 p-5 ring-1 ring-gray-200 shadow-sm transition-shadow hover:shadow-[6px_6px_16px_rgba(0,0,0,0.12)] sm:flex-row sm:items-center">
+            <div class="min-w-0 flex-1">
+              <a href="https://thetiny.site/BArxCj" target="_blank" rel="noopener" class="break-all font-mono text-sm text-violet-600 hover:underline">https://thetiny.site/BArxCj</a>
+              <p class="truncate text-xs text-gray-400">https://leena45945.softr.app</p>
+            </div>
+            <div class="flex shrink-0 items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-white px-3 py-1.5 text-xs font-bold text-gray-900 ring-1 ring-gray-100 shadow-sm">
+                <svg class="h-3.5 w-3.5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9l5 12 1.8-5.2L21 14z"/><path d="M4 4l2 2"/><path d="M9 2v3"/><path d="M2 9h3"/></svg>
+                279 clicks
+              </span>
+              <button class="copy-btn inline-flex items-center gap-1.5 rounded-lg bg-violet-600 px-4 py-2 text-xs font-bold text-white" data-copy="https://thetiny.site/BArxCj">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy
+              </button>
+              <button class="qr-btn inline-flex items-center gap-1.5 rounded-lg bg-gray-200 px-3 py-2 text-xs font-semibold text-violet-600" data-qr="https://thetiny.site/BArxCj">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="5" height="5" rx="1"/><rect x="16" y="3" width="5" height="5" rx="1"/><rect x="3" y="16" width="5" height="5" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
+                QR
+              </button>
+            </div>
+          </article>
+
+          <article class="flex flex-col gap-4 rounded-xl bg-gray-100 p-5 ring-1 ring-gray-200 shadow-sm transition-shadow hover:shadow-[6px_6px_16px_rgba(0,0,0,0.12)] sm:flex-row sm:items-center">
+            <div class="min-w-0 flex-1">
+              <a href="https://thetiny.site/kLrnXd" target="_blank" rel="noopener" class="break-all font-mono text-sm text-violet-600 hover:underline">https://thetiny.site/kLrnXd</a>
+              <p class="truncate text-xs text-gray-400">https://supportersframe.com/blog/supportersframecom-introduces-qr-codes-for-frame-links</p>
+            </div>
+            <div class="flex shrink-0 items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-white px-3 py-1.5 text-xs font-bold text-gray-900 ring-1 ring-gray-100 shadow-sm">
+                <svg class="h-3.5 w-3.5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9l5 12 1.8-5.2L21 14z"/><path d="M4 4l2 2"/><path d="M9 2v3"/><path d="M2 9h3"/></svg>
+                98 clicks
+              </span>
+              <button class="copy-btn inline-flex items-center gap-1.5 rounded-lg bg-violet-600 px-4 py-2 text-xs font-bold text-white" data-copy="https://thetiny.site/kLrnXd">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy
+              </button>
+              <button class="qr-btn inline-flex items-center gap-1.5 rounded-lg bg-gray-200 px-3 py-2 text-xs font-semibold text-violet-600" data-qr="https://thetiny.site/kLrnXd">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="5" height="5" rx="1"/><rect x="16" y="3" width="5" height="5" rx="1"/><rect x="3" y="16" width="5" height="5" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
+                QR
+              </button>
+            </div>
+          </article>
+
+          <article class="flex flex-col gap-4 rounded-xl bg-gray-100 p-5 ring-1 ring-gray-200 shadow-sm transition-shadow hover:shadow-[6px_6px_16px_rgba(0,0,0,0.12)] sm:flex-row sm:items-center">
+            <div class="min-w-0 flex-1">
+              <a href="https://thetiny.site/qQNTp0" target="_blank" rel="noopener" class="break-all font-mono text-sm text-violet-600 hover:underline">https://thetiny.site/qQNTp0</a>
+              <p class="truncate text-xs text-gray-400">https://docs.google.com/forms/d/e/1FAIpQLSf3aBIiGp4uunkBsQVLy_zLWcwkWhILOqEYa45tVdHsO38Xrg/viewform</p>
+            </div>
+            <div class="flex shrink-0 items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-white px-3 py-1.5 text-xs font-bold text-gray-900 ring-1 ring-gray-100 shadow-sm">
+                <svg class="h-3.5 w-3.5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9l5 12 1.8-5.2L21 14z"/><path d="M4 4l2 2"/><path d="M9 2v3"/><path d="M2 9h3"/></svg>
+                77 clicks
+              </span>
+              <button class="copy-btn inline-flex items-center gap-1.5 rounded-lg bg-violet-600 px-4 py-2 text-xs font-bold text-white" data-copy="https://thetiny.site/qQNTp0">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy
+              </button>
+              <button class="qr-btn inline-flex items-center gap-1.5 rounded-lg bg-gray-200 px-3 py-2 text-xs font-semibold text-violet-600" data-qr="https://thetiny.site/qQNTp0">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="5" height="5" rx="1"/><rect x="16" y="3" width="5" height="5" rx="1"/><rect x="3" y="16" width="5" height="5" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
+                QR
+              </button>
+            </div>
+          </article>
+
+          <article class="flex flex-col gap-4 rounded-xl bg-gray-100 p-5 ring-1 ring-gray-200 shadow-sm transition-shadow hover:shadow-[6px_6px_16px_rgba(0,0,0,0.12)] sm:flex-row sm:items-center">
+            <div class="min-w-0 flex-1">
+              <a href="https://thetiny.site/wXcB7y" target="_blank" rel="noopener" class="break-all font-mono text-sm text-violet-600 hover:underline">https://thetiny.site/wXcB7y</a>
+              <p class="truncate text-xs text-gray-400">https://maps.app.goo.gl/3ezKFEhd5CHg1TzG7</p>
+            </div>
+            <div class="flex shrink-0 items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-white px-3 py-1.5 text-xs font-bold text-gray-900 ring-1 ring-gray-100 shadow-sm">
+                <svg class="h-3.5 w-3.5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9l5 12 1.8-5.2L21 14z"/><path d="M4 4l2 2"/><path d="M9 2v3"/><path d="M2 9h3"/></svg>
+                50 clicks
+              </span>
+              <button class="copy-btn inline-flex items-center gap-1.5 rounded-lg bg-violet-600 px-4 py-2 text-xs font-bold text-white" data-copy="https://thetiny.site/wXcB7y">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy
+              </button>
+              <button class="qr-btn inline-flex items-center gap-1.5 rounded-lg bg-gray-200 px-3 py-2 text-xs font-semibold text-violet-600" data-qr="https://thetiny.site/wXcB7y">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="5" height="5" rx="1"/><rect x="16" y="3" width="5" height="5" rx="1"/><rect x="3" y="16" width="5" height="5" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
+                QR
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PREMIUM ====================================== -->
+    <section id="premium" class="scroll-mt-20 bg-gray-100 py-20">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wider text-violet-600">Premium</p>
+          <h2 class="mt-3 text-2xl font-bold text-gray-900 lg:whitespace-nowrap">Unlock powerful tools for serious growth.</h2>
+          <p class="mt-4 text-gray-400">Go beyond basic shortening with a full suite of marketing and developer tools — custom branded links, UTM builders, deep analytics, QR codes, and a REST API for your apps.</p>
+          <ul class="mt-6 space-y-3 text-sm text-gray-900">
+            <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100"><svg class="h-3 w-3 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>Custom branded short links</li>
+            <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100"><svg class="h-3 w-3 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>UTM parameter builder</li>
+            <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100"><svg class="h-3 w-3 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>Powerful analytics dashboard</li>
+            <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100"><svg class="h-3 w-3 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>QR Code generator (PNG/SVG)</li>
+            <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100"><svg class="h-3 w-3 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>REST API with full documentation</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl bg-violet-600 p-8">
+          <h3 class="text-base font-bold text-white">Link Analytics Dashboard</h3>
+          <div class="mt-7 space-y-6">
+            <div><div class="flex justify-between text-sm"><span class="font-mono text-violet-200">shorturl.bd/ig9Kp2</span><span class="font-bold text-white">1,247</span></div><div class="mt-2 h-1.5 rounded-full bg-violet-500"><div class="bar-fill h-1.5 rounded-full bg-violet-300" data-width="100%"></div></div></div>
+            <div><div class="flex justify-between text-sm"><span class="font-mono text-violet-200">shorturl.bd/yt3Nm8</span><span class="font-bold text-white">589</span></div><div class="mt-2 h-1.5 rounded-full bg-violet-500"><div class="bar-fill h-1.5 rounded-full bg-violet-300" data-width="47%"></div></div></div>
+            <div><div class="flex justify-between text-sm"><span class="font-mono text-violet-200">shorturl.bd/lk7Rv1</span><span class="font-bold text-white">312</span></div><div class="mt-2 h-1.5 rounded-full bg-violet-500"><div class="bar-fill h-1.5 rounded-full bg-violet-300" data-width="25%"></div></div></div>
+            <div><div class="flex justify-between text-sm"><span class="font-mono text-violet-200">shorturl.bd/fb2Wx9</span><span class="font-bold text-white">198</span></div><div class="mt-2 h-1.5 rounded-full bg-violet-500"><div class="bar-fill h-1.5 rounded-full bg-violet-300" data-width="16%"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ============ PRICING ========================== -->
+    <section id="pricing" class="scroll-mt-20 bg-white py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <p class="text-sm font-medium uppercase tracking-wider text-gray-400">Pricing</p>
+          <h2 class="mt-3 text-2xl font-extrabold text-gray-900 sm:text-3xl">Simple, transparent pricing.</h2>
+          <p class="mt-3 text-gray-500">No hidden fees. Start free, scale when you're ready.</p>
+        </div>
+
+        <div class="mx-auto mt-14 grid max-w-5xl gap-8 md:grid-cols-3">
+          <div class="flex flex-col rounded-2xl bg-white p-8 ring-1 ring-gray-200">
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400">Free</h3>
+            <p class="mt-3"><span class="text-5xl font-extrabold text-gray-900">$0</span><span class="text-sm text-gray-500">/forever</span></p>
+            <p class="mt-2 text-sm text-gray-500">Great for individuals and casual use.</p>
+            <ul class="mt-6 flex-1 space-y-3 text-sm text-gray-900">
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100"><svg class="h-3 w-3 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>Unlimited link shortening</li>
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100"><svg class="h-3 w-3 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>Basic click counter</li>
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100"><svg class="h-3 w-3 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>HTTPS security</li>
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100"><svg class="h-3 w-3 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>QR code (basic)</li>
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100"><svg class="h-3 w-3 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>Cross-device support</li>
+            </ul>
+            <a href="#" class="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-violet-600 px-4 py-3 text-sm font-bold text-white">
+              Get Started Free
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+
+          <div class="flex flex-col rounded-2xl bg-violet-600 p-8 shadow-xl">
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-300">Pro</h3>
+            <p class="mt-3"><span class="text-5xl font-bold text-white">$9</span><span class="text-sm text-gray-300">/per month</span></p>
+            <p class="mt-2 text-sm text-gray-300">For creators, marketers, and power users.</p>
+            <ul class="mt-6 flex-1 space-y-3 text-sm text-gray-300">
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/20"><svg class="h-3 w-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>Everything in Free</li>
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/20"><svg class="h-3 w-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>Custom short links</li>
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/20"><svg class="h-3 w-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>Advanced analytics</li>
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/20"><svg class="h-3 w-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>UTM builder</li>
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/20"><svg class="h-3 w-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>QR code (custom)</li>
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/20"><svg class="h-3 w-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>Browser extension</li>
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/20"><svg class="h-3 w-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>Priority support</li>
+            </ul>
+            <a href="#" class="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-bold text-violet-600">
+              Start 14-Day Trial
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+
+          <div class="flex flex-col rounded-2xl bg-white p-8 ring-1 ring-gray-200">
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400">Business</h3>
+            <p class="mt-3"><span class="text-4xl font-bold text-gray-900">$29</span><span class="text-sm text-gray-500">/per month</span></p>
+            <p class="mt-2 text-sm text-gray-500">For teams and growing companies.</p>
+            <ul class="mt-6 flex-1 space-y-3 text-sm text-gray-900">
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100"><svg class="h-3 w-3 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>Everything in Pro</li>
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100"><svg class="h-3 w-3 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>Team dashboard</li>
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100"><svg class="h-3 w-3 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>Developer API</li>
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100"><svg class="h-3 w-3 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>Bulk link creation</li>
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100"><svg class="h-3 w-3 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>White-label domain</li>
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100"><svg class="h-3 w-3 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>App integrations</li>
+              <li class="flex items-center gap-3"><span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100"><svg class="h-3 w-3 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></span>Dedicated support</li>
+            </ul>
+            <a href="#" class="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-violet-600 px-4 py-3 text-sm font-bold text-white">
+              Subscribe Now
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section id="testimonials" class="scroll-mt-20 bg-gray-100 pt-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <p class="text-sm font-medium uppercase tracking-widest text-gray-500">Testimonials</p>
+          <h2 class="mt-3 text-2xl font-bold text-gray-900 sm:text-3xl">Loved by 80,000+ users worldwide.</h2>
+        </div>
+        <figure class="mx-auto mt-12 max-w-2xl rounded-2xl bg-white p-8 ring-1 ring-gray-200">
+          <div class="flex gap-1 text-violet-600" aria-label="5 star rating">
+            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+          </div>
+          <blockquote class="mt-4 text-base text-gray-700">"A good platform for Link management."</blockquote>
+          <figcaption class="mt-6">
+            <span class="block text-sm font-bold text-gray-900">Nadim Majid</span>
+            <span class="block text-xs text-gray-500">User</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section id="features" class="scroll-mt-20 bg-gray-100 py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl">Why Choose Our Platform?</h2>
+          <p class="mt-3 text-gray-500">Everything you need to manage and track your links</p>
+        </div>
+
+        <div class="mx-auto mt-12 flex max-w-3xl flex-col gap-4">
+          <div class="rounded-xl bg-white p-6">
+            <svg class="h-8 w-8 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <h3 class="mt-4 text-lg font-semibold text-gray-900">Lightning Fast</h3>
+            <p class="mt-2 text-sm text-gray-500">Shorten URLs instantly with our optimized infrastructure</p>
+          </div>
+          <div class="rounded-xl bg-white p-6">
+            <svg class="h-8 w-8 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 3v18h18"/><path d="M7 16v-4M12 16V8M17 16v-6"/></svg>
+            <h3 class="mt-4 text-lg font-semibold text-gray-900">Detailed Analytics</h3>
+            <p class="mt-2 text-sm text-gray-500">Track clicks, referrers, locations, and devices</p>
+          </div>
+          <div class="rounded-xl bg-white p-6">
+            <svg class="h-8 w-8 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+            <h3 class="mt-4 text-lg font-semibold text-gray-900">Global CDN</h3>
+            <p class="mt-2 text-sm text-gray-500">Fast redirects from anywhere in the world</p>
+          </div>
+          <div class="rounded-xl bg-white p-6">
+            <svg class="h-8 w-8 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="5" height="5" rx="1"/><rect x="16" y="3" width="5" height="5" rx="1"/><rect x="3" y="16" width="5" height="5" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
+            <h3 class="mt-4 text-lg font-semibold text-gray-900">QR Codes</h3>
+            <p class="mt-2 text-sm text-gray-500">Generate QR codes for any shortened link</p>
+          </div>
+          <div class="rounded-xl bg-white p-6">
+            <svg class="h-8 w-8 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+            <h3 class="mt-4 text-lg font-semibold text-gray-900">Secure</h3>
+            <p class="mt-2 text-sm text-gray-500">All links are encrypted and malware scanned</p>
+          </div>
+          <div class="rounded-xl bg-white p-6">
+            <svg class="h-8 w-8 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <h3 class="mt-4 text-lg font-semibold text-gray-900">Expiration Control</h3>
+            <p class="mt-2 text-sm text-gray-500">Set expiry dates or click limits</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- ============ FOOTER ======================================== -->
+  <footer class="border-t border-gray-900 bg-white pb-8 pt-16 text-gray-600">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-10 md:grid-cols-3">
+        <div>
+          <a href="#home" class="inline-flex items-center"><img src="assets/img/logo.png" alt="thetiny.site" class="h-9 w-auto" /></a>          
+<p class="mt-4 max-w-sm text-sm leading-relaxed text-gray-500">
+  The fastest way to shorten, track, and manage<br />
+  your URLs. Trusted by thousands of<br />
+  marketers, developers, and businesses across<br />
+  Bangladesh and beyond.
+</p>          <div class="mt-6 flex gap-3">
+            <a href="#" aria-label="Facebook" class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:text-violet-600"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h2.5V5H14a4 4 0 0 0-4 4v2H8v3h2v6h3v-6h2.2l.8-3h-3V9a1 1 0 0 1 1-1z"/></svg></a>
+            <a href="#" aria-label="LinkedIn" class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:text-violet-600"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5v12H3v-12h3.5zM4.75 3a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5zM21 13.4v7.1h-3.5v-6.6c0-1.6-.6-2.7-2-2.7-1.1 0-1.7.7-2 1.4-.1.3-.1.6-.1 1v6.9H9.9s.05-11.2 0-12.3h3.5v1.7c.5-.7 1.3-1.8 3.2-1.8 2.3 0 4.4 1.5 4.4 5.3z"/></svg></a>
+            <a href="#" aria-label="YouTube" class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:text-violet-600"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.8-.5-5.6c-.3-1-1.1-1.8-2.1-2C18.6 4 12 4 12 4s-6.6 0-8.4.4c-1 .2-1.8 1-2.1 2C1 8.2 1 12 1 12s0 3.8.5 5.6c.3 1 1.1 1.8 2.1 2 1.8.4 8.4.4 8.4.4s6.6 0 8.4-.4c1-.2 1.8-1 2.1-2 .5-1.8.5-5.6.5-5.6z"/><path d="M10 9l5 3-5 3z" fill="#f3f4f6"/></svg></a>
+            <a href="#" aria-label="WhatsApp" class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:text-violet-600"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-3 3.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.9 2.2.9 2.6.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3l-1.7-.8c-.2-.1-.4-.1-.6.1l-.7.9c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.5-.6-.5z"/></svg></a>
+          </div>
+          <div class="mt-6 space-y-3 text-sm">
+            <a href="mailto:banglapuzzle@gmail.com" class="flex items-center gap-3 text-gray-600 hover:text-violet-600">
+              <svg class="h-5 w-5 text-violet-600" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.4L4.2 7h15.6L12 12.4zM4 8.9V17h16V8.9l-8 5.6-8-5.6z"/></svg>
+              banglapuzzle@gmail.com
+            </a>
+            <a href="tel:+8801880811048" class="flex items-center gap-3 text-gray-600 hover:text-violet-600">
+              <svg class="h-5 w-5 text-violet-600" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
+              +880 1880-811048
+            </a>
+          </div>
+        </div>
+        <nav aria-label="Product">
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-500">Product</h3>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="#features" class="hover:text-violet-600">Features</a></li>
+            <li><a href="#pricing" class="hover:text-violet-600">Pricing</a></li>
+            <li><a href="#" class="hover:text-violet-600">API Docs</a></li>
+            <li><a href="#" class="hover:text-violet-600">Browser Extension</a></li>
+            <li><a href="#" class="hover:text-violet-600">Report Malicious URL</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company">
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-500">Company</h3>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="#" class="hover:text-violet-600">About Us</a></li>
+            <li><a href="#" class="hover:text-violet-600">Blog</a></li>
+            <li><a href="#" class="hover:text-violet-600">Terms &amp; Conditions</a></li>
+            <li><a href="#" class="hover:text-violet-600">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-violet-600">Cookie Policy</a></li>
+            <li><a href="#" class="hover:text-violet-600">Refund Policy</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mt-12 border-t border-gray-100 pt-6 text-center text-sm text-gray-500">
+        <p>© <span id="year">2026</span> <span class="font-semibold text-violet-600">Bangla Puzzle Limited</span>. All rights reserved.</p>
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
+          <a href="#" class="hover:text-violet-600">Privacy Policy</a>
+          <a href="#" class="hover:text-violet-600">Refund Policy</a>
+          <a href="#" class="hover:text-violet-600">Cookie Policy</a>
+          <a href="#" class="hover:text-violet-600">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" aria-label="Back to top" class="fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-violet-600 text-white shadow-md">
+    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <div id="toast" role="status" class="fixed bottom-6 left-1/2 z-50 rounded-lg bg-gray-900 px-4 py-2.5 text-sm text-white shadow-lg"></div>
+
+  <div id="qrModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="qrTitle">
+    <div id="qrBackdrop" class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm"></div>
+    <div class="relative w-full max-w-xs rounded-2xl bg-white p-6 text-center shadow-2xl">
+      <button id="qrClose" aria-label="Close" class="absolute right-3 top-3 rounded-full p-1.5 text-gray-400 hover:bg-gray-100 hover:text-gray-700">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <h3 id="qrTitle" class="text-lg font-bold text-gray-900">Scan QR Code</h3>
+      <p id="qrUrl" class="mt-1 break-all font-mono text-xs text-gray-500"></p>
+      <img id="qrImg" class="mx-auto my-4 h-56 w-56 rounded-lg ring-1 ring-gray-200" alt="QR code for the shortened link" />
+      <a id="qrDownload" href="#" download="qrcode.png" class="block rounded-lg bg-violet-600 px-4 py-2.5 text-sm font-semibold text-white">Download QR</a>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

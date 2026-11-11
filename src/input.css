@@ -1,0 +1,3 @@
+@tailwind base;       /* Reset: removes browser default margins etc. → consistent starting point */
+@tailwind components; /* (empty for us — a slot for reusable component classes) */
+@tailwind utilities;  /* All the utility classes you used: p-4, flex, text-sm... */

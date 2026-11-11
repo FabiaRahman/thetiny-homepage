@@ -1,0 +1,28 @@
+/* ===== Custom styles (on top of Tailwind) ===== */
+html { scroll-behavior: smooth; }
+
+/* Palette-matched scrollbar */
+html { scrollbar-width: thin; scrollbar-color: #ddd6fe #f3f4f6; }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #f3f4f6; }
+::-webkit-scrollbar-thumb { background: #ddd6fe; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #c4b5fd; }
+
+/* Analytics bars grow when the section becomes visible */
+.bar-fill { width: 0; transition: width 1.2s cubic-bezier(.22, 1, .36, 1); }
+
+/* Toast notification */
+#toast { transform: translate(-50%, 8px); opacity: 0; pointer-events: none; transition: opacity .3s ease, transform .3s ease; }
+#toast.show { transform: translate(-50%, 0); opacity: 1; }
+
+/* Back-to-top button */
+#toTop { opacity: 0; pointer-events: none; transition: opacity .3s ease, transform .3s ease; transform: translateY(8px); }
+#toTop.show { opacity: 1; pointer-events: auto; transform: none; }
+
+/* Active nav link (scrollspy) — violet-600 */
+.nav-link.active { color: #7c3aed; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .bar-fill { transition: none; }
+}
